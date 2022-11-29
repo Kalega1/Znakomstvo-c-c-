@@ -1,7 +1,2 @@
-﻿int a = 5;
-double b = 2.5;
-bool c = a > b;
-string d = "word";
-char e = '%';
-
-Console.WriteLine(a+b);
+﻿int a = 5, b = 3;
+Console.WriteLine($"My number is {a} and  {b} it is good");
