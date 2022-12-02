@@ -44,4 +44,12 @@ if (a % 2==1)
 Console.ReadKey();
 */
 
+// Задача 4. Найти все четные числа от 1 до n
+/*
+Console.WriteLine("Введите любое число: ");
+int n = int.Parse(Console.ReadLine());
+    
+for (int i = 2; i <= n; i += 2)
+    Console.WriteLine(i);
+*/
 
