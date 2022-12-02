@@ -42,8 +42,42 @@ while(current <= num)
 // Домашняя работа
 
 
+// Семинар 2.
+/*
+int CutNumber(int num)
+{
+    int ed = num % 10;
+    int sot = num / 100;
+
+    int result = sot * 10 + ed;
+    return result;
+}
+
+int randNum = new Random().Next(100, 1000);
+int newNum = CutNumber(randNum);
+
+Console.WriteLine($"Новая версия номера {randNum} это {newNum}");
+*/
+
+// Работа в классе
+int FindBiggedDigit(int num)
+{
+    int odin = num / 10;
+    int dva = num % 10;
+    int result;
+    if (odin > dva)
+        result = odin;
+    else result = dva;
+
+    return result;
+
+}
 
 
+int randNum = new Random().Next(10, 99);
+int newNum = FindBiggedDigit(randNum);
+
+Console.WriteLine("FindBiggedDigit " + newNum);
 
 
 
