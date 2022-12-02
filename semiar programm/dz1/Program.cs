@@ -32,5 +32,16 @@ else
 Console.ReadKey();
 */
 
+// Задача 3. Поиск проверка числа на четнось
+/*
+int a;                             
+Console.Write("введите любое число: ");
+a= Console.Read(); 
+if (a % 2==1)
+    Console.WriteLine("это число нечетное");
+    else
+        Console.WriteLine("это число четное");
+Console.ReadKey();
+*/
 
 
