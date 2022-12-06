@@ -105,7 +105,6 @@ Console.WriteLine($"третья цифра: {ThirdDigit(number1)}");
 
 Console.Write("Введите число от 1 до 7:");
 int num = Convert.ToInt32(Console.ReadLine());
-num = Convert.ToInt32(Console.ReadLine());
 
     if (num >= 1 && num <= 7)
     {
@@ -114,3 +113,4 @@ num = Convert.ToInt32(Console.ReadLine());
     }
     else Console.WriteLine("Не верное число");
     
+
