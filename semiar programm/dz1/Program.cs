@@ -76,3 +76,41 @@ static void Main(string[] args)
 
 // Задача 13 Найти третью цифру заданного числа, или сообщить, что ее нет.
 
+/*
+int ThirdDigit(int number)
+
+        {
+            int result = -1;
+            if (number >= 100)
+            {
+                while (number > 999)
+                {
+                    number = number / 10;
+                }
+                result = number % 10;
+            }
+            return result; 
+        }
+Console.Write("введите любые три цифры: ");
+int number1 = Convert.ToInt32(Console.ReadLine());
+
+if (ThirdDigit(number1) == -1)
+Console.WriteLine("третьей цифры нет");
+else
+Console.WriteLine($"третья цифра: {ThirdDigit(number1)}");
+*/
+
+//Задача 15. Проверить является ли число дня недели выходным.
+
+
+Console.Write("Введите число от 1 до 7:");
+int num = Convert.ToInt32(Console.ReadLine());
+num = Convert.ToInt32(Console.ReadLine());
+
+    if (num >= 1 && num <= 7)
+    {
+        if (num == 6 | num == 7) Console.WriteLine("Сегодня выходной");
+        else Console.WriteLine("Сегодня рабочий день");
+    }
+    else Console.WriteLine("Не верное число");
+    
