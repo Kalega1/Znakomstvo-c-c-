@@ -53,3 +53,26 @@ for (int i = 2; i <= n; i += 2)
     Console.WriteLine(i);
 */
 
+
+// Домашнее задание два
+
+//Задача 10. Найти второе число из трех чисел
+/*
+class Program   
+{
+static void Main(string[] args)
+{
+    Console.WriteLine("введите три числа");
+    var n = Math.Abs(Convert.ToInt64(Console.ReadLine()));
+    while (n >= 100)
+    {
+        n /= 10;
+    }
+    var r = n % 10;
+    Console.WriteLine(r + " это второе число");
+}
+}
+*/
+
+// Задача 13 Найти третью цифру заданного числа, или сообщить, что ее нет.
+
