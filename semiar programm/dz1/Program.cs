@@ -102,7 +102,7 @@ Console.WriteLine($"третья цифра: {ThirdDigit(number1)}");
 
 //Задача 15. Проверить является ли число дня недели выходным.
 
-
+/*
 Console.Write("Введите число от 1 до 7:");
 int num = Convert.ToInt32(Console.ReadLine());
 
@@ -112,5 +112,7 @@ int num = Convert.ToInt32(Console.ReadLine());
         else Console.WriteLine("Сегодня рабочий день");
     }
     else Console.WriteLine("Не верное число");
+    */
+    
     
 
