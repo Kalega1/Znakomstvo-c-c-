@@ -1,118 +1,51 @@
-﻿//Урок 1.
+﻿//Домашнее задание №3
 
-//Задача 1. Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+//Программа проверки пятизначного палиндрома
 
-/*Console.Write("Ввести первое число: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Ввести второе число: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
+/*Console.WriteLine("Введите пятизначное число: ");
+string num = Console.ReadLine();
+int len = num.Length;
 
-if(num1 > num2)
-    Console.WriteLine(num1 + " = макс, " + num2 + " = мин. ");
-if(num1 < num2)
-    Console.WriteLine(num2 + " = макс, " + num1 + " = мин. ");
-    */
-
-
-//задача 2. Найти максимальное число из трех чисел
-/*Console.Write("Введите первое число: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите второе число: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите третье число: ");
-int num3 = Convert.ToInt32(Console.ReadLine());
-
-if(num1 > num2 & num1 > num3)
-    Console.WriteLine(num1 + " = макс");
-else 
-    if(num2 > num1)
-        Console.WriteLine(num2 + " = макс");
-    else
-        Console.WriteLine("они все равны");
-Console.ReadKey();
-*/
-
-// Задача 3. Поиск проверка числа на четнось
-/*
-int a;                             
-Console.Write("введите любое число: ");
-a= Console.Read(); 
-if (a % 2==1)
-    Console.WriteLine("это число нечетное");
-    else
-        Console.WriteLine("это число четное");
-Console.ReadKey();
-*/
-
-// Задача 4. Найти все четные числа от 1 до n
-/*
-Console.WriteLine("Введите любое число: ");
-int n = int.Parse(Console.ReadLine());
-    
-for (int i = 2; i <= n; i += 2)
-    Console.WriteLine(i);
-*/
-
-============================================================================================================================================
-// Домашнее задание два
-
-//Задача 10. Найти второе число из трех чисел
-/*
-class Program   
+if (len == 5)
 {
-static void Main(string[] args)
-{
-    Console.WriteLine("введите три числа");
-    var n = Math.Abs(Convert.ToInt64(Console.ReadLine()));
-    while (n >= 100)
+    if (num[0] == num[4] && num[1] == num[3])
     {
-        n /= 10;
+        Console.WriteLine($"{num} - 'это палиндром'");
     }
-    var r = n % 10;
-    Console.WriteLine(r + " это второе число");
+    else
+    {
+        Console.WriteLine($"{num} - не является палиндромом");
+    }
 }
-}
-*/
-
-// Задача 13 Найти третью цифру заданного числа, или сообщить, что ее нет.
-
-/*
-int ThirdDigit(int number)
-
-        {
-            int result = -1;
-            if (number >= 100)
-            {
-                while (number > 999)
-                {
-                    number = number / 10;
-                }
-                result = number % 10;
-            }
-            return result; 
-        }
-Console.Write("введите любые три цифры: ");
-int number1 = Convert.ToInt32(Console.ReadLine());
-
-if (ThirdDigit(number1) == -1)
-Console.WriteLine("третьей цифры нет");
 else
-Console.WriteLine($"третья цифра: {ThirdDigit(number1)}");
+{
+    Console.WriteLine($"Так нельзя: {num} - наберите пятизначное число");
+}
 */
-
-//Задача 15. Проверить является ли число дня недели выходным.
-
+// программа нахождение отрезка в триде пространстве
 /*
-Console.Write("Введите число от 1 до 7:");
-int num = Convert.ToInt32(Console.ReadLine());
+int x1 = Coordinate("x", "A");
+int y1 = Coordinate("y", "A");
+int z1 = Coordinate("z", "A");
+int x2 = Coordinate("x", "B");
+int y2 = Coordinate("y", "B");
+int z2 = Coordinate("z", "B");
 
-    if (num >= 1 && num <= 7)
-    {
-        if (num == 6 | num == 7) Console.WriteLine("Сегодня выходной");
-        else Console.WriteLine("Сегодня рабочий день");
-    }
-    else Console.WriteLine("Не верное число");
-    */
-    
-    
+int Coordinate(string coorName, string pointName)
+{
+    Console.Write($"Введите координату {coorName} точки {pointName}: ");
+    return Convert.ToInt16(Console.ReadLine());
+}
 
+double Decision(double x1, double x2, 
+                double y1, double y2, 
+                double z1, double z2){
+  return Math.Sqrt(Math.Pow((x2-x1), 2) + 
+                   Math.Pow((y2-y1), 2) + 
+                   Math.Pow((z2-z1), 2));
+}
+
+double segmentLength =  Math.Round (Decision(x1, x2, y1, y2, z1, z2), 2 );
+
+Console.WriteLine($"Длина отрезка  {segmentLength}");
+*/
