@@ -1,51 +1,49 @@
-﻿//Домашнее задание №3
+﻿//Домашнее задание №4
 
-//Программа проверки пятизначного палиндрома
+//Программа цикла возведения А в натуральное число Б
 
-/*Console.WriteLine("Введите пятизначное число: ");
-string num = Console.ReadLine();
-int len = num.Length;
+/* Console.WriteLine("введите число A");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите число B");
+int b = Convert.ToInt32(Console.ReadLine());
+int step = a;
 
-if (len == 5)
+for (int i = 1; i < b; i++)
 {
-    if (num[0] == num[4] && num[1] == num[3])
-    {
-        Console.WriteLine($"{num} - 'это палиндром'");
-    }
-    else
-    {
-        Console.WriteLine($"{num} - не является палиндромом");
-    }
+step = step * a;
 }
-else
-{
-    Console.WriteLine($"Так нельзя: {num} - наберите пятизначное число");
-}
+Console.WriteLine("A в степени B равно: " + step);
 */
-// программа нахождение отрезка в триде пространстве
+//Сумма цифр в числе
 /*
-int x1 = Coordinate("x", "A");
-int y1 = Coordinate("y", "A");
-int z1 = Coordinate("z", "A");
-int x2 = Coordinate("x", "B");
-int y2 = Coordinate("y", "B");
-int z2 = Coordinate("z", "B");
+Console.WriteLine("введите число");
+int i = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
 
-int Coordinate(string coorName, string pointName)
+while (i > 0)
 {
-    Console.Write($"Введите координату {coorName} точки {pointName}: ");
-    return Convert.ToInt16(Console.ReadLine());
+int num = i % 10;
+i = i / 10;
+sum = sum + num;
 }
+Console.WriteLine("сумма всех цифр в числе равна: " + sum);
+*/
 
-double Decision(double x1, double x2, 
-                double y1, double y2, 
-                double z1, double z2){
-  return Math.Sqrt(Math.Pow((x2-x1), 2) + 
-                   Math.Pow((y2-y1), 2) + 
-                   Math.Pow((z2-z1), 2));
+//массив из 8 элементов и вывод на экран
+
+/*
+int [] numbers = new int[8];
+Console.Write("[");
+
+for (int i = 0; i < numbers.Length; i++)
+ {
+    numbers [i] = new Random().Next(0, 11);
+    Console.Write(" " + Method (i) + " ");
+ }
+Console.Write("]");
+
+int Method (int a)
+{
+    return numbers[a];
 }
-
-double segmentLength =  Math.Round (Decision(x1, x2, y1, y2, z1, z2), 2 );
-
-Console.WriteLine($"Длина отрезка  {segmentLength}");
 */
