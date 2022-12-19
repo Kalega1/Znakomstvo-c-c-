@@ -1,49 +1,123 @@
-﻿//Домашнее задание №4
+﻿//Домашнее задание №5
+// проверка количества чётных чисел в заданном пользователе массиве массиве.
 
-//Программа цикла возведения А в натуральное число Б
-
-/* Console.WriteLine("введите число A");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите число B");
-int b = Convert.ToInt32(Console.ReadLine());
-int step = a;
-
-for (int i = 1; i < b; i++)
-{
-step = step * a;
-}
-Console.WriteLine("A в степени B равно: " + step);
-*/
-//Сумма цифр в числе
 /*
-Console.WriteLine("введите число");
-int i = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите размер массива");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[size];
+FillArrayRandomNumbers(numbers);
+Console.WriteLine("Вот такой массив получился: ");
+PrintArray(numbers);
+int count = 0;
+
+for (int z = 0; z < numbers.Length; z++)
+if (numbers[z] % 2 == 0)
+count++;
+
+Console.WriteLine($"всего {numbers.Length} чисел, {count} четные");
+
+void FillArrayRandomNumbers(int[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        numbers[i] = new Random().Next(100,1000);
+    }
+}
+void PrintArray(int[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + " ");
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
+*/
+
+
+
+
+
+
+
+
+
+
+//Создать одномерный массив со случайными числами. Найти сумму элементов, стоящих на нечетных позициях.
+
+/*Console.WriteLine("Введите размер массива");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[size];
+FillArrayRandomNumbers(numbers);
+Console.WriteLine("Массив: ");
+PrintArray(numbers);
 int sum = 0;
 
-while (i > 0)
+for (int z = 0; z < numbers.Length; z+=2)
+    sum = sum + numbers[z];
+
+    Console.WriteLine($"всего {numbers.Length} чисел, сумма элементов на нечётных позициях = {sum}");
+
+void FillArrayRandomNumbers(int[] numbers)
 {
-int num = i % 10;
-i = i / 10;
-sum = sum + num;
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = new Random().Next(1,10);
+        }
 }
-Console.WriteLine("сумма всех цифр в числе равна: " + sum);
-*/
-
-//массив из 8 элементов и вывод на экран
-
-/*
-int [] numbers = new int[8];
-Console.Write("[");
-
-for (int i = 0; i < numbers.Length; i++)
- {
-    numbers [i] = new Random().Next(0, 11);
-    Console.Write(" " + Method (i) + " ");
- }
-Console.Write("]");
-
-int Method (int a)
+void PrintArray(int[] numbers)
 {
-    return numbers[a];
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    Console.Write("]");
+    Console.WriteLine();
 }
 */
+
+//Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+Console.WriteLine("Введите размер массива");
+int size = Convert.ToInt32(Console.ReadLine());
+double[] numbers = new double[size];
+FillArrayRandomNumbers(numbers);
+Console.WriteLine("Вот наш массив: ");
+PrintArray(numbers);
+double min = Int32.MaxValue;
+double max = Int32.MinValue;
+
+for (int z = 0; z < numbers.Length; z++)
+{
+    if (numbers[z] > max)
+        {
+            max = numbers[z];
+        }
+    if (numbers[z] < min)
+        {
+            min = numbers[z];
+        }
+}
+
+Console.WriteLine($"всего {numbers.Length} чисел. Максимальное значение = {max}, минимальное значение = {min}");
+Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
+
+void FillArrayRandomNumbers(double[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = Convert.ToDouble(new Random().Next(100,1000)) / 100;
+        }
+}
+void PrintArray(double[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    Console.Write("]");
+    Console.WriteLine();
+}
