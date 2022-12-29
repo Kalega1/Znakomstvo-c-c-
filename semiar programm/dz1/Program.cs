@@ -95,9 +95,5 @@ for (int j = 0; j < arr.GetLength(1); j++)
     Console.Write($"{ sum / arr.GetLength(0)} ");
 }
 Console.ReadLine();
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
+
 
